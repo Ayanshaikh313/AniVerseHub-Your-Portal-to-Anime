@@ -16,3 +16,17 @@ body {
 :root {
   color-scheme: dark;
 }
+
+/* Floating animation for anime character */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+.floating-anime {
+  animation: float 3s ease-in-out infinite;
+}
