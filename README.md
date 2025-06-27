@@ -1,6 +1,6 @@
 # <img src="public/images.png" width="40"> AniVerseHub
 
-**Your Gateway to Infinite Anime Worlds** | [Live Demo](#) | [Report Bug](#) | [Request Feature](#)
+**Your Gateway to Infinite Anime Worlds**
 
 ![AniVerseHub Banner](public/front_page.png)
 
