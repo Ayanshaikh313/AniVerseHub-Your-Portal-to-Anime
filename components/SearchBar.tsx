@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { searchAnime, convertJikanToAnimeProp, AnimeProp } from "@/lib/jikan-api";
-import AnimeCard from "./AnimeCard";
+import {
+  searchAnime,
+  convertJikanToAnimeProp,
+  AnimeProp,
+} from "@/lib/jikan-api";
+import AnimeCard from "./AnimeHubCard";
 import Image from "next/image";
 
 function SearchBar() {
@@ -23,7 +27,7 @@ function SearchBar() {
       const searchResults = response.data.map(convertJikanToAnimeProp);
       setResults(searchResults);
     } catch (error) {
-      console.error('Search error:', error);
+      console.error("Search error:", error);
       setResults([]);
     } finally {
       setLoading(false);

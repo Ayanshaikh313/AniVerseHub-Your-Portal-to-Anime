@@ -1,5 +1,5 @@
-import AnimeCard, { AnimeProp } from "@/components/AnimeCard";
-import LoadMore from "../components/LoadMore";
+import AnimeCard, { AnimeProp } from "@/components/AnimeHubCard";
+import LoadMore from "../components/Loader";
 import SearchBar from "@/components/SearchBar";
 import { fetchTopAnime, convertJikanToAnimeProp } from "@/lib/jikan-api";
 
@@ -11,14 +11,14 @@ async function Home() {
     const response = await fetchTopAnime(1);
     initialAnime = response.data.map(convertJikanToAnimeProp);
   } catch (err) {
-    console.error('Error fetching initial anime:', err);
-    error = 'Failed to load anime. Please try again later.';
+    console.error("Error fetching initial anime:", err);
+    error = "Failed to load anime. Please try again later.";
   }
 
   return (
     <main className="sm:p-16 py-16 px-8 flex flex-col gap-10">
       <SearchBar />
-      
+
       <h2 className="text-3xl text-white font-bold">Top Anime</h2>
 
       {error ? (
@@ -39,4 +39,4 @@ async function Home() {
   );
 }
 
-export default Home
+export default Home;
